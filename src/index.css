@@ -4,371 +4,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-cream-light: #F8F6F0;
-  --color-beige-warm: #F0EDE6;
-  --color-gold: #D4AF37;
-  --color-deep-gold: #B8941F;
-  --color-red-accent: #8B0000;
-  --color-pink-accent: #E91E63;
-  --color-text-primary: #3C2415;
-  --color-text-secondary: #5D4E37;
-  --color-button-bg: #E8DCC0;
-  --color-button-hover: #DDD0B8;
-  --font-header: 'Libre Baskerville', serif;
-  --font-headline: 'Brawler', serif;
-  --font-body: 'Nunito Sans', sans-serif;
-}
-
 @layer base {
   body {
-    font-family: var(--font-body);
-    color: var(--color-text-primary);
-    background-color: #FFFFFF;
-    line-height: 1.6;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #3C2415;
+    background-color: #FEFEFE;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-headline);
-    color: var(--color-text-primary);
-    line-height: 1.2;
+    font-family: 'Brawler', serif;
+    color: #2C1810;
   }
   
   .section-header {
-    font-family: var(--font-header);
+    font-family: 'Libre Baskerville', serif;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-text-primary);
+    color: #3C2415;
   }
   
   .hero-title {
-    font-family: var(--font-headline);
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    line-height: 1.1;
+    font-family: 'Brawler', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
   
   .hero-subtitle {
-    font-family: var(--font-header);
+    font-family: 'Libre Baskerville', serif;
     font-size: 0.875rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  }
-
-  .top-bar {
-    background-color: var(--color-cream-light);
-    color: var(--color-text-primary);
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    padding: 8px 0;
-    text-align: center;
-  }
-
-  .navigation-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    background: transparent;
-    padding: 20px 0;
-  }
-
-  .logo-section {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .logo-main {
-    font-family: var(--font-headline);
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: white;
-    letter-spacing: 0.1em;
-    margin-bottom: 4px;
-  }
-
-  .logo-tagline {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: white;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-  }
-
-  .main-navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .nav-item {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .nav-item:hover {
-    color: var(--color-gold);
-  }
-
-  .nav-item:hover::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--color-gold);
-  }
-
-  .social-icons {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 16px;
-  }
-
-  .user-icons {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .icon-white {
-    color: white;
-    width: 20px;
-    height: 20px;
-    transition: color 0.3s ease;
-  }
-
-  .icon-white:hover {
-    color: var(--color-gold);
-  }
-
-  .cart-counter {
-    background-color: var(--color-red-accent);
-    color: white;
-    font-size: 0.75rem;
-    padding: 2px 6px;
-    border-radius: 50%;
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    min-width: 18px;
-    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
 }
 
 @layer components {
   .btn-primary {
-    background-color: var(--color-button-bg);
-    color: var(--color-text-primary);
-    font-family: var(--font-body);
+    @apply bg-[#E8DCC0] text-[#3C2415] px-8 py-3 font-medium transition-colors hover:bg-[#D4AF37] hover:text-white;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .btn-primary:hover {
-    background-color: var(--color-button-hover);
-    color: var(--color-text-primary);
-  }
-
-  .btn-secondary {
-    background-color: transparent;
-    color: var(--color-text-primary);
-    border: 2px solid var(--color-button-bg);
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 10px 22px;
-    border-radius: 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .btn-secondary:hover {
-    background-color: var(--color-button-bg);
-    color: var(--color-text-primary);
   }
   
   .wine-card {
-    background-color: white;
-    border: 1px solid #E5E7EB;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .wine-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    @apply bg-[#F5F5DC] border border-[#E8DCC0] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow;
   }
   
-  .section-bg-welcome {
-    background-color: var(--color-cream-light);
+  .section-bg-warm {
+    background-color: #F5F5DC;
   }
   
-  .section-bg-history {
-    background-color: var(--color-beige-warm);
-  }
-  
-  .section-bg-events {
-    background-color: var(--color-cream-light);
-  }
-  
-  .section-bg-wine-wheels {
-    background-color: var(--color-cream-light);
-  }
-  
-  .numbered-feature {
-    font-family: var(--font-headline);
-    font-size: 4rem;
-    font-weight: 400;
-    color: var(--color-gold);
-    margin-bottom: 1rem;
-    line-height: 1;
-  }
-  
-  .red-dot {
-    width: 12px;
-    height: 12px;
-    background-color: var(--color-red-accent);
-    border-radius: 50%;
-  }
-
-  .hero-overlay {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
-  }
-
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
-
-  .container-custom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  @media (min-width: 768px) {
-    .container-custom {
-      padding: 0 40px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container-custom {
-      padding: 0 60px;
-    }
-  }
-
-  .section-padding {
-    padding: 60px 0;
-  }
-
-  @media (min-width: 768px) {
-    .section-padding {
-      padding: 80px 0;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .section-padding {
-      padding: 100px 0;
-    }
-  }
-}
-
-/* Mobile Navigation Styles */
-@media (max-width: 1023px) {
-  .social-icons,
-  .user-icons {
-    display: none;
-  }
-
-  .main-navigation {
-    display: none;
-  }
-
-  .mobile-menu-button {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    color: white;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-text-primary);
-    z-index: 100;
-    padding: 60px 20px 20px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-
-  .mobile-menu.open {
-    transform: translateX(0);
-  }
-
-  .mobile-nav-item {
-    display: block;
-    color: white;
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    text-decoration: none;
-  }
-
-  .mobile-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+  .section-bg-cream {
+    background-color: #E8DCC0;
   }
 }

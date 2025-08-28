@@ -53,7 +53,6 @@ function App() {
             <Route path="/visit/hours-location" element={<HoursLocation />} />
             <Route path="/visit/tastings-tours" element={<TastingsTours />} />
             <Route path="/visit/faq" element={<FAQ />} />
-            <Route path="/directions" element={<Directions />} />
             
             {/* Shop Wines Routes */}
             <Route path="/shop" element={<Shop />} />
