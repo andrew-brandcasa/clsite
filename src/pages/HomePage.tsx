@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { Heart, ShoppingCart, Calendar, MapPin, Award, Users } from 'lucide-react';
 
@@ -40,7 +41,7 @@ const HomePage: React.FC = () => {
         height="full"
       >
         <button className="btn-primary text-lg">
-          ABOUT CASA LARGA
+          <Link to="/about">ABOUT CASA LARGA</Link>
         </button>
       </Hero>
 
@@ -154,9 +155,9 @@ const HomePage: React.FC = () => {
                 guests as family. Our Italian roots run deep, influencing everything from our winemaking 
                 philosophy to our warm hospitality.
               </p>
-              <button className="btn-primary">
+              <Link to="/about" className="btn-primary">
                 LEARN MORE ABOUT US
-              </button>
+              </Link>
             </div>
             <div className="h-96 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
               <div className="text-center text-[#3C2415]">

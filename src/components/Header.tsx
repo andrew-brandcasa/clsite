@@ -82,6 +82,9 @@ const Header: React.FC = () => {
             <Link to="/contact" className="btn-primary">
               Contact Us
             </Link>
+            <Link to="/about" className="text-[#3C2415] hover:text-[#D4AF37] transition-colors font-nunito font-medium">
+              About
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}

@@ -70,6 +70,7 @@ function App() {
             {/* Supporting Pages */}
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about-casa-larga" element={<About />} />
             <Route path="/where-to-buy" element={<WhereToBuy />} />
             <Route path="/awards" element={<Awards />} />
             <Route path="/press" element={<Press />} />
