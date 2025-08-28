@@ -8,7 +8,7 @@
   body {
     font-family: 'Nunito Sans', sans-serif;
     color: #3C2415;
-    background-color: #FEFEFE;
+    background-color: #FFFFFF;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -42,21 +42,36 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-[#E8DCC0] text-[#3C2415] px-8 py-3 font-medium transition-colors hover:bg-[#D4AF37] hover:text-white;
+    @apply bg-cream text-dark-brown px-8 py-3 font-medium transition-colors hover:bg-gold hover:text-white;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
   }
   
   .wine-card {
-    @apply bg-[#F5F5DC] border border-[#E8DCC0] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow;
   }
   
-  .section-bg-warm {
-    background-color: #F5F5DC;
+  .section-bg-welcome {
+    background-color: #F8F6F0;
   }
   
-  .section-bg-cream {
-    background-color: #E8DCC0;
+  .section-bg-history {
+    background-color: #F0EDE6;
+  }
+  
+  .section-bg-events {
+    background-color: #F8F6F0;
+  }
+  
+  .section-bg-wine-wheels {
+    background-color: #F8F6F0;
+  }
+  
+  .numbered-feature {
+    @apply text-6xl font-brawler text-gold mb-4;
   }
 }

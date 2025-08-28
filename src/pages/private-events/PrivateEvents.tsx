@@ -53,7 +53,7 @@ const PrivateEvents: React.FC = () => {
                 description: "Exclusive access to our complete wine collection"
               }
             ].map((feature, index) => (
-              <div key={index} className="text-center p-6 bg-warm-beige rounded-lg">
+              <div key={index} className="text-center p-6 bg-welcome-beige rounded-lg">
                 <feature.icon className="h-12 w-12 text-gold mx-auto mb-4" />
                 <h3 className="text-lg font-brawler text-darker-brown mb-3">{feature.title}</h3>
                 <p className="text-dark-brown font-nunito text-sm">{feature.description}</p>
@@ -68,7 +68,7 @@ const PrivateEvents: React.FC = () => {
           <h3 className="text-3xl font-brawler text-darker-brown text-center mb-12">Celebrations for Every Occasion</h3>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-cream">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
               <div className="h-48 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
                 <Heart className="h-16 w-16 text-pink-400" />
               </div>
@@ -80,12 +80,12 @@ const PrivateEvents: React.FC = () => {
                 </p>
                 <p className="text-sm text-dark-brown font-nunito mb-4">Capacity: 50-250 guests</p>
                 <button className="w-full btn-primary font-nunito">
-                  Learn More
+                  LEARN MORE
                 </button>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-cream">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
               <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                 <Building className="h-16 w-16 text-blue-400" />
               </div>
@@ -97,12 +97,12 @@ const PrivateEvents: React.FC = () => {
                 </p>
                 <p className="text-sm text-dark-brown font-nunito mb-4">Capacity: 25-200 guests</p>
                 <button className="w-full btn-primary font-nunito">
-                  Learn More
+                  LEARN MORE
                 </button>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-cream">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
               <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                 <PartyPopper className="h-16 w-16 text-purple-400" />
               </div>
@@ -114,7 +114,7 @@ const PrivateEvents: React.FC = () => {
                 </p>
                 <p className="text-sm text-dark-brown font-nunito mb-4">Capacity: 50-300 guests</p>
                 <button className="w-full btn-primary font-nunito">
-                  Learn More
+                  LEARN MORE
                 </button>
               </div>
             </div>
