@@ -85,7 +85,7 @@ const Shop: React.FC = () => {
             Each bottle represents our commitment to quality and our passion for winemaking excellence.
           </p>
           
-          <div className="inline-flex items-center space-x-2 bg-welcome-beige text-dark-brown px-4 py-2 rounded-lg">
+          <div className="inline-flex items-center space-x-2 bg-warm-beige text-dark-brown px-4 py-2 rounded-lg">
             <Truck className="h-5 w-5" />
             <span className="text-sm font-nunito font-medium">We ship to 40 states with secure packaging</span>
           </div>
@@ -95,7 +95,7 @@ const Shop: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {wineCategories.map((category, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden border border-cream hover:shadow-lg transition-all duration-300">
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={category.image} 
@@ -112,7 +112,7 @@ const Shop: React.FC = () => {
                     {category.description}
                   </p>
                   <button className="w-full btn-primary font-nunito font-medium">
-                    SHOP {category.name.toUpperCase()}
+                    Shop {category.name}
                   </button>
                 </div>
               </div>

@@ -75,7 +75,7 @@ const About: React.FC = () => {
             <h3 className="text-3xl font-brawler text-darker-brown mb-6">Tradition Meets Innovation</h3>
           </div>
           
-          <div className="bg-welcome-beige rounded-lg p-8">
+          <div className="bg-warm-beige rounded-lg p-8">
             <p className="text-dark-brown font-nunito leading-relaxed text-center max-w-3xl mx-auto">
               We believe great wine begins in the vineyard. Our sustainable farming practices and careful 
               attention to detail ensure that each grape reaches its full potential. In the winery, we 
@@ -113,15 +113,15 @@ const About: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white p-6 rounded-lg border border-cream">
                 <h4 className="font-brawler text-darker-brown mb-2">50 Years</h4>
                 <p className="text-sm text-dark-brown font-nunito">Of winemaking excellence</p>
               </div>
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white p-6 rounded-lg border border-cream">
                 <h4 className="font-brawler text-darker-brown mb-2">35 Acres</h4>
                 <p className="text-sm text-dark-brown font-nunito">Of premium vineyard land</p>
               </div>
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
+              <div className="bg-white p-6 rounded-lg border border-cream">
                 <h4 className="font-brawler text-darker-brown mb-2">15+ Wines</h4>
                 <p className="text-sm text-dark-brown font-nunito">Varieties in production</p>
               </div>
