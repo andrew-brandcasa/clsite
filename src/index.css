@@ -8,7 +8,7 @@
   body {
     font-family: 'Nunito Sans', sans-serif;
     color: #3C2415;
-    background-color: #FEFEFE;
+    background-color: #FFFFFF;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -18,9 +18,9 @@
   
   .section-header {
     font-family: 'Libre Baskerville', serif;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 400;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: #3C2415;
   }
@@ -33,8 +33,8 @@
   
   .hero-subtitle {
     font-family: 'Libre Baskerville', serif;
-    font-size: 0.875rem;
-    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
@@ -42,21 +42,44 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-[#E8DCC0] text-[#3C2415] px-8 py-3 font-medium transition-colors hover:bg-[#D4AF37] hover:text-white;
+    @apply bg-warm-tan text-dark-brown px-8 py-3 font-medium transition-colors hover:bg-gold hover:text-white;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
   }
   
   .wine-card {
-    @apply bg-[#F5F5DC] border border-[#E8DCC0] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow;
   }
   
-  .section-bg-warm {
-    background-color: #F5F5DC;
+  .section-bg-welcome {
+    background-color: #F8F6F0;
   }
   
-  .section-bg-cream {
-    background-color: #E8DCC0;
+  .section-bg-history {
+    background-color: #F0EDE6;
+  }
+  
+  .section-bg-events {
+    background-color: #F8F6F0;
+  }
+  
+  .section-bg-wine-wheels {
+    background-color: #F8F6F0;
+  }
+  
+  .numbered-feature {
+    @apply text-6xl font-brawler text-gold mb-4;
+    font-weight: 400;
+  }
+  
+  .red-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #DC2626;
+    border-radius: 50%;
   }
 }

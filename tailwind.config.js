@@ -4,12 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'warm-beige': '#F5F5DC',
-        'cream': '#E8DCC0',
+        'welcome-beige': '#F8F6F0',
+        'history-beige': '#F0EDE6',
+        'warm-tan': '#E8DCC0',
         'dark-brown': '#3C2415',
         'darker-brown': '#2C1810',
         'gold': '#D4AF37',
         'bronze': '#CD7F32',
+        'pink-truck': '#E91E63',
+        'footer-dark': '#2C2C2C',
       },
       fontFamily: {
         'brawler': ['Brawler', 'serif'],
