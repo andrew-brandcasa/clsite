@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, ShoppingCart, Search, User, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,103 +11,128 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-              <div className="text-white text-xs font-libre font-bold">CL</div>
-            </div>
-            <div>
-              <div className="text-xl font-brawler text-darker-brown">CASA LARGA</div>
-              <div className="text-xs text-dark-brown tracking-widest font-libre">VINEYARDS AND WINERY</div>
-            </div>
+    <>
+      {/* Top Bar */}
+      <div className="top-bar">
+        <div className="container-custom">
+          <span>Design your own custom Casa Larga wine labels. </span>
+          <Link to="/shop/custom-labels" className="text-gold hover:text-deep-gold font-medium">
+            Learn More
           </Link>
+        </div>
+      </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+      {/* Navigation Overlay */}
+      <div className="navigation-overlay">
+        <div className="container-custom relative">
+          {/* Social Media Icons - Left */}
+          <div className="social-icons">
+            <Facebook className="icon-white cursor-pointer" />
+            <Instagram className="icon-white cursor-pointer" />
+            <Youtube className="icon-white cursor-pointer" />
+            <Twitter className="icon-white cursor-pointer" />
+          </div>
+
+          {/* Logo Section - Center */}
+          <div className="logo-section">
+            <Link to="/">
+              <div className="logo-main">CASA LARGA</div>
+              <div className="logo-tagline">VINEYARDS AND WINERY</div>
+            </Link>
+          </div>
+
+          {/* Main Navigation - Center */}
+          <nav className="main-navigation">
             {/* Visit Us Dropdown */}
             <div className="relative group">
-              <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
+              <button className="nav-item flex items-center">
                 Visit Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/visit/hours-location" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Hours & Location</Link>
-                <Link to="/visit/tastings-tours" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Wine Tasting & Tours</Link>
-                <Link to="/visit/faq" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">FAQ</Link>
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/visit/hours-location" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Hours & Location</Link>
+                <Link to="/visit/tastings-tours" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Wine Tasting & Tours</Link>
+                <Link to="/visit/faq" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">FAQ</Link>
+                <Link to="/directions" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Directions</Link>
               </div>
             </div>
 
             {/* Shop Wines Dropdown */}
             <div className="relative group">
-              <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
+              <button className="nav-item flex items-center">
                 Shop Wines <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Red Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">White Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Rosé</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Ice Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Reserve Collection</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Award Winners</Link>
-                <Link to="/shop/custom-labels" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Custom Labels</Link>
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">All Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Red Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">White Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Rosé</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Ice Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Reserve Collection</Link>
+                <Link to="/shop/custom-labels" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Custom Labels</Link>
               </div>
             </div>
 
             {/* Winery Events Dropdown */}
             <div className="relative group">
-              <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
+              <button className="nav-item flex items-center">
                 Winery Events <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/events/calendar" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Events Calendar</Link>
-                <Link to="/events/purple-foot-festival" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Purple Foot Festival</Link>
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/events/calendar" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Events Calendar</Link>
+                <Link to="/events/purple-foot-festival" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Purple Foot Festival</Link>
+                <Link to="/blog" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Blog</Link>
+                <Link to="/gallery" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Photo Gallery</Link>
               </div>
             </div>
 
-            {/* Private Events Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
-                Private Events <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Weddings</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Corporate Events</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Proms & Special Occasions</Link>
-              </div>
-            </div>
-
-            <Link to="/contact" className="btn-primary">
-              Contact Us
+            {/* Private Events */}
+            <Link to="/private-events" className="nav-item">
+              Private Events
             </Link>
           </nav>
 
+          {/* User Interface Icons - Right */}
+          <div className="user-icons">
+            <User className="icon-white cursor-pointer" />
+            <div className="relative">
+              <ShoppingCart className="icon-white cursor-pointer" />
+              <span className="cart-counter">2</span>
+            </div>
+            <Search className="icon-white cursor-pointer" />
+          </div>
+
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="mobile-menu-button lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
-            <nav className="space-y-4">
+        {/* Mobile Navigation Menu */}
+        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+          <button 
+            className="mobile-close"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <X className="h-6 w-6" />
+          </button>
+          
+          <nav className="mt-8">
+            <div className="space-y-4">
               <div>
                 <button 
                   onClick={() => toggleDropdown('visit')}
-                  className="flex items-center justify-between w-full text-left text-dark-brown hover:text-gold font-nunito"
+                  className="mobile-nav-item flex items-center justify-between w-full"
                 >
                   Visit Us <ChevronDown className="h-4 w-4" />
                 </button>
                 {openDropdown === 'visit' && (
                   <div className="mt-2 pl-4 space-y-2">
-                    <Link to="/visit/hours-location" className="block text-sm text-dark-brown font-nunito">Hours & Location</Link>
-                    <Link to="/visit/tastings-tours" className="block text-sm text-dark-brown font-nunito">Wine Tasting & Tours</Link>
-                    <Link to="/visit/faq" className="block text-sm text-dark-brown font-nunito">FAQ</Link>
+                    <Link to="/visit/hours-location" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>Hours & Location</Link>
+                    <Link to="/visit/tastings-tours" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>Wine Tasting & Tours</Link>
+                    <Link to="/visit/faq" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>FAQ</Link>
                   </div>
                 )}
               </div>
@@ -115,14 +140,14 @@ const Header: React.FC = () => {
               <div>
                 <button 
                   onClick={() => toggleDropdown('shop')}
-                  className="flex items-center justify-between w-full text-left text-dark-brown hover:text-gold font-nunito"
+                  className="mobile-nav-item flex items-center justify-between w-full"
                 >
                   Shop Wines <ChevronDown className="h-4 w-4" />
                 </button>
                 {openDropdown === 'shop' && (
                   <div className="mt-2 pl-4 space-y-2">
-                    <Link to="/shop" className="block text-sm text-dark-brown font-nunito">All Wines</Link>
-                    <Link to="/shop/custom-labels" className="block text-sm text-dark-brown font-nunito">Custom Labels</Link>
+                    <Link to="/shop" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>All Wines</Link>
+                    <Link to="/shop/custom-labels" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>Custom Labels</Link>
                   </div>
                 )}
               </div>
@@ -130,40 +155,30 @@ const Header: React.FC = () => {
               <div>
                 <button 
                   onClick={() => toggleDropdown('events')}
-                  className="flex items-center justify-between w-full text-left text-dark-brown hover:text-gold font-nunito"
+                  className="mobile-nav-item flex items-center justify-between w-full"
                 >
                   Winery Events <ChevronDown className="h-4 w-4" />
                 </button>
                 {openDropdown === 'events' && (
                   <div className="mt-2 pl-4 space-y-2">
-                    <Link to="/events/calendar" className="block text-sm text-dark-brown font-nunito">Events Calendar</Link>
-                    <Link to="/events/purple-foot-festival" className="block text-sm text-dark-brown font-nunito">Purple Foot Festival</Link>
+                    <Link to="/events/calendar" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>Events Calendar</Link>
+                    <Link to="/events/purple-foot-festival" className="block text-sm text-gray-300 font-nunito py-2" onClick={() => setIsMenuOpen(false)}>Purple Foot Festival</Link>
                   </div>
                 )}
               </div>
 
-              <div>
-                <button 
-                  onClick={() => toggleDropdown('private')}
-                  className="flex items-center justify-between w-full text-left text-dark-brown hover:text-gold font-nunito"
-                >
-                  Private Events <ChevronDown className="h-4 w-4" />
-                </button>
-                {openDropdown === 'private' && (
-                  <div className="mt-2 pl-4 space-y-2">
-                    <Link to="/private-events" className="block text-sm text-dark-brown font-nunito">All Private Events</Link>
-                  </div>
-                )}
-              </div>
+              <Link to="/private-events" className="mobile-nav-item" onClick={() => setIsMenuOpen(false)}>
+                Private Events
+              </Link>
 
-              <Link to="/contact" className="block btn-primary text-center">
+              <Link to="/contact" className="mobile-nav-item" onClick={() => setIsMenuOpen(false)}>
                 Contact Us
               </Link>
-            </nav>
-          </div>
-        )}
+            </div>
+          </nav>
+        </div>
       </div>
-    </header>
+    </>
   );
 };
 
