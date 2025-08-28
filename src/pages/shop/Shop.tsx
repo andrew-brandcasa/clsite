@@ -33,31 +33,6 @@ const Shop: React.FC = () => {
       name: "Award Winning Wines",
       description: "Our medal-winning selections recognized by prestigious wine competitions.",
       image: "https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg"
-    },
-    {
-      name: "Wine Specials",
-      description: "Limited-time offers and seasonal selections at special prices.",
-      image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
-    },
-    {
-      name: "Gift Sets",
-      description: "Thoughtfully curated wine collections perfect for any occasion.",
-      image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
-    },
-    {
-      name: "Custom Wine Labels",
-      description: "Personalize any wine with custom labels for weddings, corporate gifts, or special celebrations.",
-      image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
-    },
-    {
-      name: "Wine Accessories",
-      description: "Everything you need to enhance your wine experience.",
-      image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
-    },
-    {
-      name: "Gift Cards",
-      description: "The perfect gift for wine lovers - redeemable for wines, tastings, and events.",
-      image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
     }
   ];
 
@@ -75,17 +50,17 @@ const Shop: React.FC = () => {
         </button>
       </Hero>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="container-custom section-padding">
         {/* Introduction */}
         <div className="text-center mb-16">
           <h2 className="section-header mb-4">OUR COLLECTION</h2>
-          <h3 className="text-4xl md:text-5xl font-brawler text-darker-brown mb-8">Handcrafted Excellence</h3>
-          <p className="text-lg text-dark-brown font-nunito leading-relaxed max-w-3xl mx-auto mb-8">
+          <h3 className="text-4xl md:text-5xl font-brawler text-text-primary mb-8">Handcrafted Excellence</h3>
+          <p className="text-lg text-text-primary font-nunito leading-relaxed max-w-3xl mx-auto mb-8">
             Discover our complete collection of handcrafted wines, from our signature Chardonnays to our celebrated ice wines. 
             Each bottle represents our commitment to quality and our passion for winemaking excellence.
           </p>
           
-          <div className="inline-flex items-center space-x-2 bg-welcome-beige text-dark-brown px-4 py-2 rounded-lg">
+          <div className="inline-flex items-center space-x-2 bg-cream-light text-text-primary px-4 py-2 rounded-lg">
             <Truck className="h-5 w-5" />
             <span className="text-sm font-nunito font-medium">We ship to 40 states with secure packaging</span>
           </div>
@@ -105,10 +80,10 @@ const Shop: React.FC = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-brawler text-darker-brown mb-3 group-hover:text-gold transition-colors">
+                  <h3 className="text-xl font-brawler text-text-primary mb-3 group-hover:text-gold transition-colors">
                     {category.name}
                   </h3>
-                  <p className="text-dark-brown font-nunito text-sm leading-relaxed mb-4">
+                  <p className="text-text-primary font-nunito text-sm leading-relaxed mb-4">
                     {category.description}
                   </p>
                   <button className="w-full btn-primary font-nunito font-medium">
@@ -123,25 +98,25 @@ const Shop: React.FC = () => {
         {/* Featured Products Section */}
         <section className="mt-20">
           <h2 className="section-header text-center mb-4">FEATURED WINES</h2>
-          <h3 className="text-3xl font-brawler text-darker-brown text-center mb-12">Staff Picks</h3>
+          <h3 className="text-3xl font-brawler text-text-primary text-center mb-12">Staff Picks</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {Array.from({ length: 4 }, (_, i) => (
               <div key={i} className="wine-card">
                 <div className="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
-                  <div className="w-20 h-32 bg-darker-brown rounded-sm"></div>
+                  <div className="w-20 h-32 bg-text-primary rounded-sm"></div>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-brawler text-darker-brown mb-2">PALLIDO</h4>
-                  <p className="text-sm text-dark-brown font-nunito mb-2">White Wine</p>
+                  <h4 className="font-brawler text-text-primary mb-2">PALLIDO</h4>
+                  <p className="text-sm text-text-secondary font-nunito mb-2">White Wine</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-green-600 font-nunito">IN STOCK</span>
-                    <span className="font-brawler text-darker-brown font-bold">$99.00</span>
+                    <span className="font-brawler text-text-primary font-bold">$99.00</span>
                   </div>
                   <div className="flex space-x-2 mt-3">
                     <button className="flex-1 border border-gold text-gold py-1 rounded text-sm hover:bg-gold hover:text-white transition-colors">
                       ♡
                     </button>
-                    <button className="flex-1 bg-gold text-white py-1 rounded text-sm hover:bg-bronze transition-colors">
+                    <button className="flex-1 bg-gold text-white py-1 rounded text-sm hover:bg-deep-gold transition-colors">
                       Add to Cart
                     </button>
                   </div>
