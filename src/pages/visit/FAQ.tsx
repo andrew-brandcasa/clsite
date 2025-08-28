@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Hero from '../../components/Hero';
 import { ChevronDown } from 'lucide-react';
 
 interface FAQItem {
@@ -96,43 +95,38 @@ const FAQ: React.FC = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <Hero 
-        subtitle="FREQUENTLY ASKED QUESTIONS"
-        title="Everything You Need to Know About Visiting Casa Larga"
-        backgroundImage="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
-        height="full"
-      >
-        <button className="btn-primary text-lg font-nunito font-semibold">
-          PLAN YOUR VISIT
-        </button>
-      </Hero>
+      <div className="bg-[#2C5530] text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-serif mb-4">Frequently Asked Questions</h1>
+          <p className="text-xl md:text-2xl text-gray-200">Everything You Need to Know About Visiting Casa Larga</p>
+        </div>
+      </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {faqCategories.map((category, categoryIndex) => (
           <section key={categoryIndex} className="mb-12">
-            <h2 className="section-header mb-6">{category.title.toUpperCase()}</h2>
+            <h2 className="text-2xl font-serif text-[#2C5530] mb-6">{category.title}</h2>
             <div className="space-y-4">
               {category.items.map((item, itemIndex) => {
                 const itemId = `${categoryIndex}-${itemIndex}`;
                 const isOpen = openItems.includes(itemId);
                 
                 return (
-                  <div key={itemIndex} className="bg-white border border-cream rounded-lg shadow-sm">
+                  <div key={itemIndex} className="bg-white border border-gray-200 rounded-lg shadow-sm">
                     <button
                       onClick={() => toggleItem(itemId)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-warm-beige transition-colors"
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <span className="font-brawler text-darker-brown">{item.question}</span>
+                      <span className="font-medium text-[#2C5530]">{item.question}</span>
                       <ChevronDown 
-                        className={`h-5 w-5 text-dark-brown transform transition-transform ${
+                        className={`h-5 w-5 text-gray-500 transform transition-transform ${
                           isOpen ? 'rotate-180' : ''
                         }`} 
                       />
                     </button>
                     {isOpen && (
                       <div className="px-6 pb-4">
-                        <p className="text-dark-brown font-nunito leading-relaxed">{item.answer}</p>
+                        <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                       </div>
                     )}
                   </div>
