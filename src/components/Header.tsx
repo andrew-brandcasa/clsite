@@ -72,9 +72,10 @@ const Header: React.FC = () => {
                 Private Events <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute top-full left-0 bg-white shadow-lg border border-[#E8DCC0] rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Weddings</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Corporate Events</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Proms & Special Occasions</Link>
+                <Link to="/private-events" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">All Private Events</Link>
+                <Link to="/private-events#weddings" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Weddings</Link>
+                <Link to="/private-events#corporate" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Corporate Events</Link>
+                <Link to="/private-events#special" className="block px-4 py-2 text-sm text-[#3C2415] hover:bg-[#F5F5DC] font-nunito">Special Occasions</Link>
               </div>
             </div>
 

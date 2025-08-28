@@ -61,7 +61,7 @@ const PrivateEvents: React.FC = () => {
           <h2 className="text-3xl font-serif text-[#2C5530] text-center mb-12">Event Types</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+            <div id="weddings" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
               <div className="h-48 bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
                 <Heart className="h-16 w-16 text-pink-400" />
               </div>
@@ -78,7 +78,7 @@ const PrivateEvents: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+            <div id="corporate" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
               <div className="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
                 <Building className="h-16 w-16 text-blue-400" />
               </div>
@@ -95,7 +95,7 @@ const PrivateEvents: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+            <div id="special" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
               <div className="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
                 <PartyPopper className="h-16 w-16 text-purple-400" />
               </div>
