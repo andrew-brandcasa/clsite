@@ -11,19 +11,19 @@ const HomePage: React.FC = () => {
       image: "https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg"
     },
     {
-      name: "MERITAGE",
+      name: "PALLIDO",
       type: "Red Wine",
       price: "$85.00",
       image: "https://images.pexels.com/photos/50691/bottle-wine-red-wine-wine-bottle-50691.jpeg"
     },
     {
-      name: "ICE WINE",
+      name: "PALLIDO",
       type: "Dessert Wine",
       price: "$45.00",
       image: "https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg"
     },
     {
-      name: "CHARDONNAY",
+      name: "PALLIDO",
       type: "White Wine",
       price: "$65.00",
       image: "https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg"
@@ -48,7 +48,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 section-bg-welcome">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-12 h-12 bg-red-600 rounded-full mx-auto mb-6"></div>
+            <div className="red-dot mx-auto mb-6"></div>
             <h2 className="section-header mb-4">WELCOME TO CASA LARGA</h2>
             <p className="text-lg text-dark-brown max-w-3xl mx-auto font-nunito leading-relaxed">
               Located in Fairport, NY. Celebrating 50 years of winemaking from 
@@ -107,12 +107,8 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredWines.map((wine, index) => (
               <div key={index} className="wine-card group cursor-pointer">
-                <div className="h-64 overflow-hidden">
-                  <img 
-                    src={wine.image} 
-                    alt={wine.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="h-64 overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <div className="w-16 h-48 bg-darker-brown rounded-sm shadow-lg"></div>
                 </div>
                 <div className="p-6">
                   <h4 className="font-brawler text-darker-brown text-lg mb-1">{wine.name}</h4>
@@ -191,7 +187,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 section-bg-wine-wheels">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="h-96 bg-gradient-to-br from-pink-200 to-pink-300 rounded-lg flex items-center justify-center">
+            <div className="h-96 bg-gradient-to-br from-pink-100 to-pink-200 rounded-lg flex items-center justify-center">
               <div className="text-center text-dark-brown">
                 <div className="w-32 h-20 bg-pink-truck rounded-lg mx-auto mb-4"></div>
                 <p className="font-nunito">Pink Truck Illustration</p>

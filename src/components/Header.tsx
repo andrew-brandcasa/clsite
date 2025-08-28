@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b border-cream sticky top-0 z-50">
+    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -32,10 +32,10 @@ const Header: React.FC = () => {
               <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
                 Visit Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-cream rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/visit/hours-location" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Hours & Location</Link>
-                <Link to="/visit/tastings-tours" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Wine Tasting & Tours</Link>
-                <Link to="/visit/faq" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">FAQ</Link>
+              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/visit/hours-location" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Hours & Location</Link>
+                <Link to="/visit/tastings-tours" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Wine Tasting & Tours</Link>
+                <Link to="/visit/faq" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">FAQ</Link>
               </div>
             </div>
 
@@ -44,14 +44,14 @@ const Header: React.FC = () => {
               <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
                 Shop Wines <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-cream rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Red Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">White Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Rosé</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Ice Wines</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Reserve Collection</Link>
-                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Award Winners</Link>
-                <Link to="/shop/custom-labels" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Custom Labels</Link>
+              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Red Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">White Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Rosé</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Ice Wines</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Reserve Collection</Link>
+                <Link to="/shop" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Award Winners</Link>
+                <Link to="/shop/custom-labels" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Custom Labels</Link>
               </div>
             </div>
 
@@ -60,9 +60,9 @@ const Header: React.FC = () => {
               <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
                 Winery Events <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-cream rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/events/calendar" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Events Calendar</Link>
-                <Link to="/events/purple-foot-festival" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Purple Foot Festival</Link>
+              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/events/calendar" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Events Calendar</Link>
+                <Link to="/events/purple-foot-festival" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Purple Foot Festival</Link>
               </div>
             </div>
 
@@ -71,10 +71,10 @@ const Header: React.FC = () => {
               <button className="flex items-center text-dark-brown hover:text-gold transition-colors font-nunito font-medium">
                 Private Events <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 bg-white shadow-lg border border-cream rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Weddings</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Corporate Events</Link>
-                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-warm-beige font-nunito">Proms & Special Occasions</Link>
+              <div className="absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Weddings</Link>
+                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Corporate Events</Link>
+                <Link to="/private-events" className="block px-4 py-2 text-sm text-dark-brown hover:bg-welcome-beige font-nunito">Proms & Special Occasions</Link>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-cream py-4">
+          <div className="md:hidden border-t border-gray-200 py-4">
             <nav className="space-y-4">
               <div>
                 <button 

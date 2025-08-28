@@ -6,7 +6,7 @@ export default {
       colors: {
         'welcome-beige': '#F8F6F0',
         'history-beige': '#F0EDE6',
-        'cream': '#E8DCC0',
+        'warm-tan': '#E8DCC0',
         'dark-brown': '#3C2415',
         'darker-brown': '#2C1810',
         'gold': '#D4AF37',
