@@ -35,12 +35,12 @@ const HomePage: React.FC = () => {
       {/* Hero Section - Aerial Vineyard View */}
       <Hero 
         subtitle="ITALIAN HERITAGE"
-        title="From Craft to Glass"
+        title="From Graft to Glass"
         backgroundImage="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
         height="full"
       >
         <button className="btn-primary text-lg font-nunito font-semibold">
-          DISCOVER OUR WINES
+          PLAN YOUR VISIT
         </button>
       </Hero>
 
@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
             <h2 className="section-header mb-4">WELCOME TO CASA LARGA</h2>
             <p className="text-lg text-text-primary max-w-3xl mx-auto font-nunito leading-relaxed">
               Located in Fairport, NY. Celebrating 50 years of winemaking from 
-              craft to glass. Find solace in premium our wines, unwind our 
+              graft to glass. Find solace in our premium wines, unwind in our 
               tasting room and discover the art of winemaking.
             </p>
           </div>
@@ -95,7 +95,7 @@ const HomePage: React.FC = () => {
             <h2 className="section-header mb-4">OUR WINES</h2>
             <h3 className="text-4xl md:text-5xl font-brawler text-text-primary mb-8">Shop Our Catalog</h3>
             <p className="text-lg text-text-primary max-w-2xl mx-auto font-nunito mb-8">
-              We ship to 48 states! Shop our selection of award-winning wines through our 
+              We ship to 40 states! Shop our selection of award-winning wines through our 
               online Store. Reds, whites, ice wines, reserve wines, limited wines, 
               gift sets and more. Free shipping on orders over $100.
             </p>
@@ -105,10 +105,19 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredWines.map((wine, index) => (
+            {[
+              { name: "CHARDONNAY-CLV", type: "White Wine", price: "$24.00", image: "https://images.pexels.com/photos/544961/pexels-photo-544961.jpeg" },
+              { name: "MERITAGE", type: "Red Wine", price: "$32.00", image: "https://images.pexels.com/photos/50691/bottle-wine-red-wine-wine-bottle-50691.jpeg" },
+              { name: "ICE WINE", type: "Dessert Wine", price: "$45.00", image: "https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg" },
+              { name: "CAB-MERLOT", type: "Red Wine", price: "$28.00", image: "https://images.pexels.com/photos/50691/bottle-wine-red-wine-wine-bottle-50691.jpeg" }
+            ].map((wine, index) => (
               <div key={index} className="wine-card group cursor-pointer">
-                <div className="h-64 overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <div className="w-16 h-48 bg-text-primary rounded-sm shadow-lg"></div>
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={wine.image} 
+                    alt={wine.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
                   <h4 className="font-brawler text-text-primary text-lg mb-1">{wine.name}</h4>
@@ -118,43 +127,16 @@ const HomePage: React.FC = () => {
                     <span className="font-brawler text-text-primary font-bold">{wine.price}</span>
                   </div>
                   <div className="flex space-x-2">
-                    <button className="flex-1 border border-gold text-gold py-2 rounded hover:bg-gold hover:text-white transition-colors">
+                    <button className="flex-1 border border-gold text-gold py-2 hover:bg-gold hover:text-white transition-colors">
                       <Heart className="h-4 w-4 mx-auto" />
                     </button>
-                    <button className="flex-1 bg-gold text-white py-2 rounded hover:bg-deep-gold transition-colors">
+                    <button className="flex-1 bg-gold text-white py-2 hover:bg-deep-gold transition-colors">
                       <ShoppingCart className="h-4 w-4 mx-auto" />
                     </button>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* History Section */}
-      <section className="section-padding section-bg-history">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="section-header mb-4">OUR HISTORY</h2>
-              <h3 className="text-4xl md:text-5xl font-brawler text-text-primary mb-8">New York's 21st Winery</h3>
-              <p className="text-lg text-text-primary mb-6 font-nunito leading-relaxed">
-                In 1974, we became a licensed winery and have been at it with 
-                passion and dedication ever since. We are the Finger Lakes' 
-                Heritage. By 1978, our wine vineyard opened 
-                to the public and we became New York's 21st licensed 
-                winery.
-              </p>
-              <button className="btn-primary font-nunito font-semibold">
-                ABOUT CASA LARGA
-              </button>
-            </div>
-            <div className="h-96 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
-              <div className="text-center text-text-primary">
-                <p className="font-nunito">Vintage Winery Photo</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -202,10 +184,10 @@ const HomePage: React.FC = () => {
                 complete with our signature pink truck.
               </p>
               <ul className="text-text-primary mb-8 font-nunito space-y-2">
-                <li>• UNIQUE YOUR DATE</li>
+                <li>• BOOK YOUR DATE</li>
                 <li>• PROFESSIONAL BARTENDING</li>
-                <li>• WE ROLL ON</li>
-                <li>• WINE CELEBRATE</li>
+                <li>• FULL WINE SELECTION</li>
+                <li>• CELEBRATE IN STYLE</li>
               </ul>
               <button className="btn-primary font-nunito font-semibold">
                 BOOK WINE ON WHEELS
@@ -231,13 +213,13 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                title: "LIVE MUSIC SERIES",
+                title: "PATIO PARTY SERIES",
                 date: "MONTHLY EVENTS",
                 description: "Join us for live music on our patio with wine and food trucks.",
                 image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg"
               },
               {
-                title: "UNCAGED",
+                title: "PURPLE FOOT FESTIVAL",
                 date: "SPECIAL EVENT",
                 description: "Our signature harvest celebration with grape stomping and festivities.",
                 image: "https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg"

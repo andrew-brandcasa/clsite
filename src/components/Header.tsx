@@ -45,10 +45,10 @@ const Header: React.FC = () => {
           <nav className="main-navigation">
             {/* Visit Us Dropdown */}
             <div className="relative group">
-              <button className="nav-item flex items-center">
+              <button className="nav-item flex items-center hover:text-gold transition-colors">
                 Visit Us <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-50">
                 <Link to="/visit/hours-location" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Hours & Location</Link>
                 <Link to="/visit/tastings-tours" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Wine Tasting & Tours</Link>
                 <Link to="/visit/faq" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">FAQ</Link>
@@ -58,10 +58,10 @@ const Header: React.FC = () => {
 
             {/* Shop Wines Dropdown */}
             <div className="relative group">
-              <button className="nav-item flex items-center">
+              <button className="nav-item flex items-center hover:text-gold transition-colors">
                 Shop Wines <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-50">
                 <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">All Wines</Link>
                 <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Red Wines</Link>
                 <Link to="/shop" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">White Wines</Link>
@@ -74,19 +74,21 @@ const Header: React.FC = () => {
 
             {/* Winery Events Dropdown */}
             <div className="relative group">
-              <button className="nav-item flex items-center">
+              <button className="nav-item flex items-center hover:text-gold transition-colors">
                 Winery Events <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all z-50">
                 <Link to="/events/calendar" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Events Calendar</Link>
                 <Link to="/events/purple-foot-festival" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Purple Foot Festival</Link>
+                <Link to="/events/patio-party-series" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Patio Party Series</Link>
+                <Link to="/events/wine-dinners" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Wine Dinners</Link>
                 <Link to="/blog" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Blog</Link>
                 <Link to="/gallery" className="block px-4 py-2 text-sm text-text-primary hover:bg-cream-light font-nunito">Photo Gallery</Link>
               </div>
             </div>
 
             {/* Private Events */}
-            <Link to="/private-events" className="nav-item">
+            <Link to="/private-events" className="nav-item hover:text-gold transition-colors">
               Private Events
             </Link>
           </nav>

@@ -23,12 +23,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-libre mb-4 text-gold section-header">Quick Links</h3>
             <ul className="space-y-2 font-nunito">
-              <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
-              <li><Link to="/shop" className="hover:text-gold transition-colors">Shop</Link></li>
-              <li><Link to="/visit/hours-location" className="hover:text-gold transition-colors">Visit</Link></li>
-              <li><Link to="/events/calendar" className="hover:text-gold transition-colors">Events</Link></li>
-              <li><Link to="/private-events" className="hover:text-gold transition-colors">Private Events</Link></li>
-              <li><Link to="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-white hover:text-gold transition-colors">About</Link></li>
+              <li><Link to="/shop" className="text-white hover:text-gold transition-colors">Shop</Link></li>
+              <li><Link to="/visit/hours-location" className="text-white hover:text-gold transition-colors">Visit</Link></li>
+              <li><Link to="/events/calendar" className="text-white hover:text-gold transition-colors">Events</Link></li>
+              <li><Link to="/private-events" className="text-white hover:text-gold transition-colors">Private Events</Link></li>
+              <li><Link to="/contact" className="text-white hover:text-gold transition-colors">Contact</Link></li>
             </ul>
           </div>
 

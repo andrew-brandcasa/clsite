@@ -100,23 +100,28 @@ const Shop: React.FC = () => {
           <h2 className="section-header text-center mb-4">FEATURED WINES</h2>
           <h3 className="text-3xl font-brawler text-text-primary text-center mb-12">Staff Picks</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }, (_, i) => (
+            {[
+              { name: "CHARDONNAY-CLV", type: "White Wine", price: "$24.00" },
+              { name: "MERITAGE", type: "Red Wine", price: "$32.00" },
+              { name: "ICE WINE", type: "Dessert Wine", price: "$45.00" },
+              { name: "RIESLING", type: "White Wine", price: "$22.00" }
+            ].map((wine, i) => (
               <div key={i} className="wine-card">
                 <div className="h-64 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
                   <div className="w-20 h-32 bg-text-primary rounded-sm"></div>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-brawler text-text-primary mb-2">PALLIDO</h4>
-                  <p className="text-sm text-text-secondary font-nunito mb-2">White Wine</p>
+                  <h4 className="font-brawler text-text-primary mb-2">{wine.name}</h4>
+                  <p className="text-sm text-text-secondary font-nunito mb-2">{wine.type}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-green-600 font-nunito">IN STOCK</span>
-                    <span className="font-brawler text-text-primary font-bold">$99.00</span>
+                    <span className="font-brawler text-text-primary font-bold">{wine.price}</span>
                   </div>
                   <div className="flex space-x-2 mt-3">
-                    <button className="flex-1 border border-gold text-gold py-1 rounded text-sm hover:bg-gold hover:text-white transition-colors">
+                    <button className="flex-1 border border-gold text-gold py-1 text-sm hover:bg-gold hover:text-white transition-colors">
                       ♡
                     </button>
-                    <button className="flex-1 bg-gold text-white py-1 rounded text-sm hover:bg-deep-gold transition-colors">
+                    <button className="flex-1 bg-gold text-white py-1 text-sm hover:bg-deep-gold transition-colors">
                       Add to Cart
                     </button>
                   </div>
