@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../../components/ContactForm';
 import { Heart, Building, PartyPopper, Users, Award, MapPin } from 'lucide-react';
 
 const PrivateEvents: React.FC = () => {
