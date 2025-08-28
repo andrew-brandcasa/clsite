@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../components/ContactForm';
 import { Palette, Wine, Package } from 'lucide-react';
 
 const CustomLabels: React.FC = () => {
