@@ -4,13 +4,13 @@ import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Twitter } from 'luci
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#2C5530] text-white">
+    <footer className="bg-[#2C1810] text-[#F5F5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-serif mb-4 text-[#D4AF37]">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-libre mb-4 text-[#D4AF37] section-header">Quick Links</h3>
+            <ul className="space-y-2 font-nunito">
               <li><Link to="/contact" className="hover:text-[#D4AF37] transition-colors">Contact</Link></li>
               <li><Link to="/careers" className="hover:text-[#D4AF37] transition-colors">Careers</Link></li>
               <li><Link to="/shop" className="hover:text-[#D4AF37] transition-colors">Shop</Link></li>
@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
 
           {/* More Links */}
           <div>
-            <h3 className="text-lg font-serif mb-4 text-[#D4AF37]">More</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-libre mb-4 text-[#D4AF37] section-header">More</h3>
+            <ul className="space-y-2 font-nunito">
               <li><Link to="/about" className="hover:text-[#D4AF37] transition-colors">About Us</Link></li>
               <li><Link to="/where-to-buy" className="hover:text-[#D4AF37] transition-colors">Where to Buy</Link></li>
               <li><Link to="/awards" className="hover:text-[#D4AF37] transition-colors">Awards & Recognition</Link></li>
@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
 
           {/* Legal & Info */}
           <div>
-            <h3 className="text-lg font-serif mb-4 text-[#D4AF37]">Legal & Info</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-libre mb-4 text-[#D4AF37] section-header">Legal & Info</h3>
+            <ul className="space-y-2 font-nunito">
               <li><Link to="/privacy" className="hover:text-[#D4AF37] transition-colors">Privacy Policy</Link></li>
               <li><Link to="/accessibility" className="hover:text-[#D4AF37] transition-colors">Accessibility</Link></li>
               <li><Link to="/blog" className="hover:text-[#D4AF37] transition-colors">Blog</Link></li>
@@ -46,8 +46,8 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-serif mb-4 text-[#D4AF37]">Contact Us</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg font-libre mb-4 text-[#D4AF37] section-header">Contact Us</h3>
+            <div className="space-y-3 font-nunito">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-[#D4AF37]" />
                 <span>(585) 223-4210</span>
@@ -67,8 +67,8 @@ const Footer: React.FC = () => {
 
             {/* Hours */}
             <div className="mt-6">
-              <h4 className="font-semibold text-[#D4AF37] mb-2">Wine Shop + Tasting Room Hours</h4>
-              <div className="text-sm space-y-1">
+              <h4 className="font-libre text-[#D4AF37] mb-2 section-header text-sm">Wine Shop + Tasting Room Hours</h4>
+              <div className="text-sm space-y-1 font-nunito">
                 <div><strong>Monday-Thursday:</strong> 11:00 a.m. - 6:00 p.m.</div>
                 <div><strong>Friday & Saturday:</strong> 10:00 a.m. - 6:00 p.m.</div>
                 <div><strong>Sunday:</strong> 12:00 p.m. - 5:00 p.m.</div>
@@ -78,18 +78,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-green-700 pt-8 mt-8">
+        <div className="border-t border-[#3C2415] pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-300 mb-4 md:mb-0">
+            <div className="text-sm text-[#E8DCC0] mb-4 md:mb-0 font-nunito">
               © 2025. All rights reserved.
             </div>
             
             {/* Social Media */}
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-gray-300 hover:text-[#D4AF37] cursor-pointer transition-colors" />
-              <Instagram className="h-5 w-5 text-gray-300 hover:text-[#D4AF37] cursor-pointer transition-colors" />
-              <Youtube className="h-5 w-5 text-gray-300 hover:text-[#D4AF37] cursor-pointer transition-colors" />
-              <Twitter className="h-5 w-5 text-gray-300 hover:text-[#D4AF37] cursor-pointer transition-colors" />
+              <Facebook className="h-5 w-5 text-[#E8DCC0] hover:text-[#D4AF37] cursor-pointer transition-colors" />
+              <Instagram className="h-5 w-5 text-[#E8DCC0] hover:text-[#D4AF37] cursor-pointer transition-colors" />
+              <Youtube className="h-5 w-5 text-[#E8DCC0] hover:text-[#D4AF37] cursor-pointer transition-colors" />
+              <Twitter className="h-5 w-5 text-[#E8DCC0] hover:text-[#D4AF37] cursor-pointer transition-colors" />
             </div>
           </div>
         </div>

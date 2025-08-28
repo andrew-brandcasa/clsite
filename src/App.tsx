@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 
 // Visit Us Pages
 import HoursLocation from './pages/visit/HoursLocation';
@@ -45,6 +46,9 @@ function App() {
         <Header />
         <main>
           <Routes>
+            {/* Home Route */}
+            <Route path="/" element={<HomePage />} />
+            
             {/* Visit Us Routes */}
             <Route path="/visit/hours-location" element={<HoursLocation />} />
             <Route path="/visit/tastings-tours" element={<TastingsTours />} />
@@ -79,11 +83,6 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/gallery" element={<PhotoGallery />} />
             <Route path="/directions" element={<Directions />} />
-            
-            {/* Default Route */}
-            <Route path="/" element={<div className="min-h-screen bg-gray-100 flex items-center justify-center">
-              <p className="text-gray-600">Select a page from the navigation to view</p>
-            </div>} />
           </Routes>
         </main>
         <Footer />
