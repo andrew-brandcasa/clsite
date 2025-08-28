@@ -30,13 +30,13 @@ const Hero: React.FC<HeroProps> = ({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
-      {overlay && <div className="hero-overlay absolute inset-0" />}
+      {overlay && <div className="absolute inset-0 bg-black bg-opacity-40" />}
       
-      <div className="relative z-10 text-center text-white container-custom">
+      <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4">
         {subtitle && (
-          <p className="hero-subtitle mb-4 text-white">{subtitle}</p>
+          <p className="hero-subtitle mb-4 text-gray-200">{subtitle}</p>
         )}
-        <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl mb-8 text-shadow">{title}</h1>
+        <h1 className="hero-title text-4xl md:text-6xl lg:text-7xl mb-8">{title}</h1>
         {children}
       </div>
     </section>
